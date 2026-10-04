@@ -292,10 +292,12 @@ p{
     background-image: url(img/banner/b10.jpg);
 }
 
-#banner3{
-    display: flex;
-    justify-content: space-between;
+#banner3{ 
+    display: flex; 
+    justify-content: space-between; 
     align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .banner3-box{
@@ -417,6 +419,9 @@ p{
     display: none;
 }
 @media (max-width: 650px){
+    .container{
+        padding: 20px 5%;
+    }
     #navbar{
         flex-direction: column;
         position: fixed;
@@ -463,7 +468,127 @@ p{
     }
     .banner-card{
         width: 100%;
+        min-width: 0;
     }
+    #service{
+    justify-content: center;
+    gap: 15px;
+}
+
+.service-box{
+    width: 150px;
+}
+.product-box{
+    width: 100%;
+    min-width: 0;
+    max-width: 350px;
+}
+.banner3-box{
+    width: 100%;
+    min-width: 0;
+}
+#newsletter{
+    padding: 30px 5%;
+    height: auto;
+    gap: 20px;
+}
+
+#newsletter form{
+    width: 100%;
+}
+
+#newsletter form input{
+    width: 100%;
+}
+#newsletter form button{
+    flex-shrink: 0;
+}
+    
+}
+
+/* shop */
+
+#shop-hero{
+    background-image: url(img/banner/b1.jpg);
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    gap: 10px;
+}
+
+/* single product  */
+
+#single-product{
+    display: flex;
+}
+#single-img-cloth{
+    width: 40%;
+}
+#diffr-design-cloth{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     
+}
+#diffr-design-cloth img{
+   flex-basis: 24%;
+   width: 24%;
+   cursor: pointer;
+}
+#sproduct-details{
+    width: 50%;
+    margin-left: 20px;
+    padding-top: 15px;
+}
+#sproduct-details h4{
+    margin: 40px 0 20px 0;
+}
+#sproduct-details select{
+    display: block;
+    margin: 10px 0px;
+    padding: 5px;
+    
+}
+#sproduct-details select:focus,
+#sproduct-details input:focus
+{
+    outline: none;
+}
+#sproduct-details input{
+    width: 60px;
+    padding: 14px;
+    font-size: 18px;
+    height: 50px;
+}
+#sproduct-details button{
+    height: 50px;
+    padding: 0 25px;
+    border: none;
+    border-radius: 10px;
+     
+    color: white;
+    background-color: rgb(56, 129, 104);
+    cursor: pointer;
+}
+#sproduct-details span{
+    line-height: 25px;
+    font-size: 18px;
+}
+
+@media(max-width : 650px){
+    #single-product{
+        flex-direction: column;
+    }
+    #single-img-cloth{
+        width: 100%;
+        
+    }
+    #sproduct-details{
+        width: 100%;
+    }
+
 }
